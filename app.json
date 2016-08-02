@@ -1,0 +1,8 @@
+{
+  "name": "MWE",
+  "description": "A simple language game",
+  "image": "heroku/python",
+  "repository": "https://github.com/anbasile/mwe",
+  "keywords": ["python", "flask" ],
+  "addons": [ "heroku-postgresql" ]
+}
