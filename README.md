@@ -1,2 +1,4 @@
 # mwe
-A language game. Deployed on Heroku.
+A language game.
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
