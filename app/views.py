@@ -45,7 +45,6 @@ dataset = [
 def index():
     words = dataset[np.random.randint(0,len(dataset))]
     form = tryForm()
-    machineguess = 0
     if form.validate_on_submit():
         return render_template('results.html',
                                form=form,
