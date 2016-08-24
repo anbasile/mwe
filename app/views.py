@@ -5,45 +5,26 @@ import pandas as pd
 import numpy as np
 from .words import calculate
 
-dataset = [
-    ['corso','fuoco','entrare','mondiale','interessi'],
-    ['fa','canzone','unico','fronte','messaggio'],
-    ['privata','piatto','sete','gridare','perdono'],
-    ['meccanico','muro','torre','catena','corona'],
-    ['pane','a terra','piuma','guanti','elastico' ],
-    ['scuola','computer','clinica','tasse','tombola'],
-    ['dolce','capitano','gesu','animale','bella'],
-    ['andare','morte','sogno','moglie','case'],
-    ['esempio','dottore','senza','conservare','pieno'],
-    ['oro','mare','parte','bocca','sergio'],
-    ['lettera','fiducia','agnelli','difensore','parcella'],
-    ['morbida','rossa','trucco','labbra','disegno'],
-    ['giornale','bianco','proverbi','fiera','divorare'],
-    ['rosso','elettore','uccello','virtu','punto'],
-    ['aprire','fondo','messaggio','varo','latte'],
-    ['volare','corso','anni','ghiaccio','romanzo' ],
-    ['nazionale','onore','guida','vana','bastardi'],
-    ['lingua','occhio','pasta','levare','radice'],
-    ['conoscenza','leggere','fedele','bella','omaggio'],
-    ['vittoria','buco','pane','lacrime','toppa'],
-    ['sotto','campo','mestiere','asino','pazzo'],
-    ['russa','scacchi','nascere','notte','aglio'],
-    ['carta','persona','forza','prova','attività' ],
-    ['buoi','dito','botte','donna','mirella'],
-    ['voce','regina','nave','volpe','rosso'],
-#    ['punto','carabienieri','rosso','nuova','gas'],
-    ['metro','ragazza','facce','elevare','letto'],
-    ['pari','pace','sosta','motivo','famiglia'],
-    ['secondo','porto','allievo','linea','pesce'],
-    ['maggio','giardino','valle','nudo','sole'],
-    ['uomo','gioco','morso','acqua','messi']
-]
+dataset = {
+    'time': ['time','spend','short','give','working'],
+    'way': ['long','go','get','come','easy'],
+    'days': ['early','past','old','spent','take'],
+    'parts': ['spare','component','consitutent','played','separate'],
+    'case': ['court','present','particular','prosecution','adjourned'],
+    'life': ['real','family','whole','public','saved'],
+    'service': ['free','telephone','intelligence','security','regular'],
+    'area': ['play','residential','wide','major','surrounding'],
+    'course': ['training','main','first','take','start'],
+    'hands': ['shook','wash','holding','raised','rubbed']
+}
+
+
 
 @app.route('/', methods=('GET', 'POST'))
 
 @app.route('/index', methods=('GET', 'POST'))
 def index():
-    words = dataset[np.random.randint(0,len(dataset))]
+    words = random.choice(list(dataset.values()))
     form = tryForm()
     if form.validate_on_submit():
         return render_template('results.html',
