@@ -3,6 +3,7 @@ from app import app
 from .forms import tryForm
 import pandas as pd
 import numpy as np
+import random
 from .words import calculate
 
 dataset = {
