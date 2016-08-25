@@ -7,7 +7,7 @@ import random
 from .words import calculate
 
 dataset = {
-    'time': ['time','spend','short','give','working'],
+    'time': ['long','spend','short','give','working'],
     'way': ['long','go','get','come','easy'],
     'days': ['early','past','old','spent','take'],
     'parts': ['spare','component','consitutent','played','separate'],
@@ -18,8 +18,6 @@ dataset = {
     'course': ['training','main','first','take','start'],
     'hands': ['shook','wash','holding','raised','rubbed']
 }
-
-
 
 @app.route('/', methods=('GET', 'POST'))
 
