@@ -27,6 +27,6 @@ def index():
     words = dataset[word]
 
     return render_template('index.html',
-                           solution=word
+                           solution=word,
                            words=words
                            )
