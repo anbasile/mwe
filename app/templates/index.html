@@ -91,23 +91,11 @@
                       <hr class="star-light">
 		      <form>
 			  <div class="form-group">
-			      <input type="text" class="form-control" id="guess" placeholder="your guess">
+			      <input type="text" class="form-control" id="user_guess" placeholder="your guess">
 			  </div>
 
 			  <!-- Modal with solution -->
-			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">show</button>
-			  <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-			      <div class="modal-dialog modal-sm" role="document">
-				  <div class="modal-content">
-				      <h4 class="modal-title">The solution is...</h4>
-				      {{ solution }}
-				            <div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					    </div>
-				  </div>
-			      </div>
-			  </div>
-
+			  <button type="button" id="show" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">show</button>
 		      </form>
 		    </div>
                 </div>
@@ -207,6 +195,40 @@
          </div>
 	 </section>
        -->
+
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+	<div class="modal-dialog modal-sm" role="document">
+	    <div class="modal-content">
+		<h4 class="modal-title">The solution is...</h4>
+		<div class="text-center">
+		    <p><b>{{ solution }}</b></p>
+		</div>
+		<div class="text-center">
+		    <h4>Machine's guess</h4>
+		    <p><b>{{ machine_solution }}</b></p>
+		</div>
+		<div class="text-center">
+		    <h4>Your guess</h4>
+		    <p><b>{{ user_solution }}</b></p>
+		</div>
+		<div>
+		    <h4>Examples</h4>
+		    <p>
+			<ul>
+			    <li>blablab</li>
+			</ul>
+		    </p>
+		</div>
+		
+		<div class="modal-footer">
+		    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		</div>
+	    </div>
+	</div>
+    </div><!-- /modal -->
+
+
+    
     <!-- Footer -->
     <footer class="text-center">
         <div class="footer-below">
@@ -243,8 +265,8 @@
     <script>
      $(document).ready(function(){
 	 $('[data-toggle="popover"]').popover();
-	 $('#play').click(function(){
-	     $('#outcomes').show();
+	 $('#show').click(function(){
+	     $('#game1').fadeOut();
 	 });
      });
     </script>

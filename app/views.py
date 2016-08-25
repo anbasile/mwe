@@ -23,8 +23,10 @@ dataset = {
 
 @app.route('/index', methods=('GET', 'POST'))
 def index():
-    words = random.choice(list(dataset.values()))
+    word = random.choice(list.dataset.keys())
+    words = dataset[word]
 
     return render_template('index.html',
+                           solution=word
                            words=words
                            )
