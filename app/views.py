@@ -24,15 +24,7 @@ dataset = {
 @app.route('/index', methods=('GET', 'POST'))
 def index():
     words = random.choice(list(dataset.values()))
-    form = tryForm()
-    if form.validate_on_submit():
-        return render_template('results.html',
-                               form=form,
-                               machineguess= calculate(words)[0],
-                               url = calculate(words)[1]
-                               )
-                               
+
     return render_template('index.html',
-                           form=form,
                            words=words
                            )
