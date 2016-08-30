@@ -340,7 +340,29 @@
 	     } 
 
              $('#game').fadeOut();
-         });
+      });
+
+      $(document).keydown(function(e){
+             var userInput = document.getElementById("userInput").value;
+             var machineGuess = document.getElementById("machineGuess").innerHTML;
+	     var solution = document.getElementById("solution").innerHTML;
+             $('#userGuess').text(userInput);
+	     if (userInput == solution) {
+		 $('#user').addClass("success");
+	     } else {
+		 $('#user').addClass("danger");
+	     }
+	     if (machineGuess == solution) {
+		 $('#machine').addClass("success");
+	     } else {
+		 $('#machine').addClass("danger");
+	     } 
+
+      $('#game').fadeOut();
+      $('.bs-example-modal-md').modal('show');
+          });
+
+
       });
     </script>
 </body>
