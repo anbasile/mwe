@@ -23,7 +23,7 @@ Here the win word would be...family. In fact it is the word which is somehow rel
 # Corpus
 
 - Brown
-
+- [Collocations](./app/data/list.pdf)
 # Solver
 
 
