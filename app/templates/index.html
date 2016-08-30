@@ -188,10 +188,10 @@
             </div>
             <div class="row">
 		<div class="col-lg-4 col-lg-offset-2">
-		    <p>MWE is a language game built for fun by Angelo Basile and Federico Sangati.</p>
+		    <p>MWE is a language game built for fun by Angelo Basile and Federico Sangati. Please note this is still in beta.</p>
 		</div>
 		<div class="col-lg-4">
-		    <p>If you found a bug, or want to make a suggestions or maybe you want to know more, then contact us by email.</p>
+		    <p>If you found a bug, or want to make a suggestions or maybe you want to know more, then contact us by <a style="color:white" href="mailto:angelobasile@yandex.ru?"><i>email</i></a>.</p>
 		</div>
             </div>
         </div>
@@ -256,7 +256,7 @@
 		    {% for word in words %}
 		    <span class="animated fadeIn"><b>{{  word }}</b></span> 
 		    {% endfor %}
-		    <p id="solution">{{ solution }}</p>
+		    <h1 id="solution"><b>{{ solution }}</b></h1>
 		</div>
 		<div class="text-center">
 		    <p id="outcome">
@@ -269,8 +269,6 @@
 	    </div>
 	</div>
     </div><!-- /modal -->
-
-
     
     <!-- Footer -->
     <footer class="text-center">
@@ -278,7 +276,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        Copyright &copy; Angelo Basile 2016
+                        Copyright &copy; <a href="http://anbasile.github.io">Angelo Basile</a> 2016
                     </div>
                 </div>
             </div>
@@ -320,15 +318,15 @@
 		  $('#symbol').addClass("fa fa-smile-o fa-5x");
 	      }
 	      else {
-		  $('#outcome').text("Nope. Try again!");
+		  $('#outcome').text("Try again!");
 		  $('#symbol').addClass("fa fa-frown-o fa-5x");
+		  $('#testa').addClass('animated hinge');
 	      }
 	      $("#again").append('<p><a href="http://mwe.herokuapp.com/" style="color:white">PLAY AGAIN!</a></p>')
               $('#game').fadeOut();
 	      $('#rules').fadeOut();
 	      $('#rulesnav').fadeOut();
-	      $('#testa').addClass('animated hinge');
-	      
+
           });
 
       });
