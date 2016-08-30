@@ -73,11 +73,15 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#portfolio">An example</a>
+                        <a href="#rules">Rules</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#about">How it works</a>
+                        <a href="#solver">The Solver</a>
                     </li>
+		    <li class="page-scroll">
+                        <a href="#about">About</a>
+                    </li>
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -91,7 +95,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <img class="img-responsive" src="/static/img/a.png" alt="">
-		    <div id="game1" class="intro-text col-lg-6 col-lg-offset-3" >
+		    <div id="game" class="intro-text col-lg-6 col-lg-offset-3" >
 		      <span class="skills">
 			{% for word in words %}
 			  <span class="animated fadeIn"><b>{{  word }}</b></span> 
@@ -100,11 +104,11 @@
                       <hr class="star-light">
 		      <form>
 			  <div class="form-group">
-			      <input type="text" class="form-control text-center" id="user_guess" placeholder="your guess">
+			      <input type="text" class="form-control text-center" id="userInput" placeholder="your guess">
 			  </div>
 
 			  <!-- Modal with solution -->
-			  <button type="button" id="show" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">show</button>
+			  <button type="button" id="show" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-md">show</button>
 		      </form>
 		    </div>
                 </div>
@@ -112,7 +116,7 @@
         </div>
     </header>
 
-    <section id="portfolio">
+    <section id="rules">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
@@ -143,22 +147,26 @@
 	    </p>
 	    <p>Got it? Try it!</p>
 	    </div>
+	    <p id="demo"></p>
         </div>
       </div>
     </section>
 
-    <section id="mechanism">
+    <section id="solver">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2>TURK</h2>
+            <h2>SOLVER</h2>
             <hr class="star-primary">
           </div>
         </div>
         <div class="row">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ornare luctus est, suscipit fermentum felis tempor id. Mauris auctor, sapien vel blandit efficitur, turpis libero ultricies sem, fermentum molestie neque dui ut quam. Vivamus porta convallis lectus, a volutpat lacus auctor ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eros dolor, interdum et aliquet et, mattis quis tellus. Vestibulum aliquet ac enim tincidunt pulvinar. Nulla fringilla, sapien in pharetra sagittis, ante est blandit lorem, quis ultricies eros risus vitae ligula. Aenean auctor tellus in nibh venenatis, a consequat elit pellentesque. Proin pretium venenatis suscipit.</p>
 	  <p>
-	    TODO: show code highlights
+	    If you play the game, you will actually play also against the machine. The software reads the same words you are give and it try to solver the puzzle as well. The mechanism is rather simple, but effective nonetheless. It querys the Brown corpus for each word' collocates and looks for a word that is intersecting as many of the five source words as possible. 
+	    </p>
+
+	  <p>
+	    TODO: show code highlights, and examples
 	    </p>
 
         </div>
@@ -166,30 +174,25 @@
     </section>
 
     <!-- About Section -->
-    <!-- <section class="success" id="about">
-         <div class="container">
-         <div class="row">
-         <div class="col-lg-12 text-center">
-         <h2>How it works</h2>
-         <hr class="star-light">
-         </div>
-         </div>
-         <div class="row">
-         <div class="col-lg-4 col-lg-offset-2">
-         <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
-         </div>
-         <div class="col-lg-4">
-         <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
-         </div>
-         <div class="col-lg-8 col-lg-offset-2 text-center">
-         <a href="#" class="btn btn-lg btn-outline">
-         <i class="fa fa-download"></i> Download Theme
-         </a>
-         </div>
-         </div>
-         </div>
-	 </section>
-       -->
+    <section class="success" id="about">
+        <div class="container">
+            <div class="row">
+		<div class="col-lg-12 text-center">
+		    <h2>About</h2>
+		    <hr class="star-light">
+		</div>
+            </div>
+            <div class="row">
+		<div class="col-lg-4 col-lg-offset-2">
+		    <p>MWE is a language game built for fun by Angelo Basile & Federico Sangati.</p>
+		</div>
+		<div class="col-lg-4">
+		    <p>If you found a bug, or want to make a suggestions or maybe you want to know more, then contact us by email.</p>
+		</div>
+            </div>
+        </div>
+    </section>
+    
     <!-- Contact Section -->
     <!-- <section id="contact">
          <div class="container">
@@ -241,28 +244,28 @@
 	 </section>
        -->
 
-    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-	<div class="modal-dialog modal-sm" role="document">
+    <div class="modal fade bs-example-modal-md" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+	<div class="modal-dialog modal-md" role="document">
 	    <div class="modal-content">
-		<h4 class="modal-title">The solution is...</h4>
+		<h4 class="modal-title text-center">The solution is...</h4>
 		<div class="text-center">
-		    <p id="solution"><b>{{ solution }}</b></p>
+		    <p id="solution">{{ solution }}</p>
 		</div>
-		<div class="text-center">
-		    <h4>Machine's guess</h4>
-		    <p><b>{{ machine_solution }}</b></p>
-		</div>
-		<div class="text-center">
-		    <h4>Your guess</h4>
-		    <p id="outcomeUserGuess"><b></b></p>
-		</div>
-		<div>
-		    <h4>Examples</h4>
-		    <p>
-			<ul>
-			    <li>blablab</li>
-			</ul>
-		    </p>
+		<div class="table-responsive">
+		    <table id="outcome" class="table table-hover">
+			<tr>
+			    <th>player</th>
+			    <th>word</th>
+			</tr>
+			<tr id="machine">
+			    <td>machine</td>
+			    <td id="machineGuess">{{ machine_solution }}</td>
+			</tr>
+			<tr id="user">
+			    <td>user</td>
+			    <td id="userGuess"></td>
+			</tr>
+		    </table>
 		</div>
 		
 		<div class="modal-footer">
@@ -313,13 +316,28 @@
           $('[data-toggle="popover"]').popover();
 
          $('#show').click(function(){
-             var userGuess = document.getElementById("user_guess").value;
-             $('#outcomeUserGuess').text(userGuess);
-             $('#game1').fadeOut();
+             var userInput = document.getElementById("userInput").value;
+             var machineGuess = document.getElementById("machineGuess").innerHTML;
+	     var solution = document.getElementById("solution").innerHTML;
+
+             $('#userGuess').text(userInput);
+	     if (userInput == solution) {
+		 $('#user').addClass("success");
+	     } else {
+		 $('#user').addClass("danger");
+	     }
+	     if (machineGuess == solution) {
+		 $('#machine').addClass("success");
+	     } else {
+		 $('#machine').addClass("danger");
+	     } 
+
+
+             $('#game').fadeOut();
          });
       });
     </script>
-    
+
 </body>
 
 </html>
