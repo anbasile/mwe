@@ -104,11 +104,16 @@
                       <hr class="star-light">
 		      <form>
 			  <div class="form-group">
-			      <input type="text" class="form-control text-center" id="userInput" placeholder="your guess">
+			    <input type="text"
+				   class="form-control text-center"
+				   id="userInput"
+				   placeholder="your guess">
 			  </div>
 
 			  <!-- Modal with solution -->
-			  <button type="button" id="play" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-md">show</button>
+			  <button type="button" id="play" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-md">
+			    play
+			  </button>
 		      </form>
 		    </div>
                 </div>
@@ -249,7 +254,10 @@
 	    <div class="modal-content">
 		<h4 class="modal-title text-center">The solution is...</h4>
 		<div class="text-center">
-		    <p id="solution">{{ solution }}</p>
+		  {% for word in words %}
+		  <span class="animated fadeIn"><b>{{  word }}</b></span> 
+		  {% endfor %}
+		  <p id="solution">{{ solution }}</p>
 		</div>
 		<div class="table-responsive">
 		    <table id="outcome" class="table table-hover">
@@ -311,7 +319,6 @@
 
     <!-- enable tooltip -->
     <script>
-
       $(document).ready(function(){
           $('[data-toggle="popover"]').popover();
 
@@ -332,12 +339,10 @@
 		 $('#machine').addClass("danger");
 	     } 
 
-
              $('#game').fadeOut();
          });
       });
     </script>
-
 </body>
 
 </html>
