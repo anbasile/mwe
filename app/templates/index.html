@@ -75,9 +75,9 @@
                     <li class="page-scroll">
                         <a href="#rules">Rules</a>
                     </li>
-                    <li class="page-scroll">
-                        <a href="#solver">The Solver</a>
-                    </li>
+                    <!-- <li class="page-scroll">
+                         <a href="#solver">The Solver</a>
+			 </li> -->
 		    <li class="page-scroll">
                         <a href="#about">About</a>
                     </li>
@@ -98,22 +98,22 @@
 		    <div id="game" class="intro-text col-lg-6 col-lg-offset-3" >
 		      <span class="skills">
 			{% for word in words %}
-			  <span class="animated fadeIn"><b>{{  word }}</b></span> 
+			  <span class="fa fa-arrow-right animated infinite bounce"></span>
+			  <span class="animated fadeIn"><b>{{  word }}</b></span>
+			  <span class="fa fa-arrow-left animated infinite bounce"></span>
 			{% endfor %}
 		      </span>
                       <hr class="star-light">
-		      <form>
+		      <form id="myForm">
 			  <div class="form-group">
 			    <input type="text"
 				   class="form-control text-center"
 				   id="userInput"
 				   placeholder="your guess">
+			    <button type="submit" id="play" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-md">
+				PLAY!
+			    </button>
 			  </div>
-
-			  <!-- Modal with solution -->
-			  <button type="button" id="play" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-md">
-			    play
-			  </button>
 		      </form>
 		    </div>
                 </div>
@@ -157,28 +157,28 @@
       </div>
     </section>
 
-    <section id="solver">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2>SOLVER</h2>
-            <hr class="star-primary">
-          </div>
-        </div>
-        <div class="row">
-	  <p>
-	    If you play the game, you will actually play also against the machine. The software reads the same words you are give and it try to solver the puzzle as well. The mechanism is rather simple, but effective nonetheless. It querys the Brown corpus for each word' collocates and looks for a word that is intersecting as many of the five source words as possible. 
-	    </p>
+    <!-- <section id="solver">
+	 <div class="container">
+         <div class="row">
+         <div class="col-lg-12 text-center">
+         <h2>SOLVER</h2>
+         <hr class="star-primary">
+         </div>
+         </div>
+         <div class="row">
 
-	  <p>
-	    TODO: show code highlights, and examples
-	    </p>
+	 <p>If you play the game, you will actually play also against the machine. The software reads the same words you are give and it try to solver the puzzle as well. The mechanism is rather simple, but effective nonetheless. It querys the Brown corpus for each word' collocates and looks for a word that is intersecting as many of the five source words as possible.</p>
 
-        </div>
-      </div>
-    </section>
+	 <p>
+	 TODO: show code highlights, and examples
+	 </p>
 
+         </div>
+	 </div>
+	 </section>
+       -->
     <!-- About Section -->
+
     <section class="success" id="about">
         <div class="container">
             <div class="row">
@@ -322,7 +322,8 @@
       $(document).ready(function(){
           $('[data-toggle="popover"]').popover();
 
-         $('#play').click(function(){
+          $('#myForm').submit(function(event){
+	     event.preventDefault();
              var userInput = document.getElementById("userInput").value;
              var machineGuess = document.getElementById("machineGuess").innerHTML;
 	     var solution = document.getElementById("solution").innerHTML;
@@ -340,31 +341,11 @@
 	     } 
 
              $('#game').fadeOut();
-      });
-
-      $(document).keydown(function(e){
-             var userInput = document.getElementById("userInput").value;
-             var machineGuess = document.getElementById("machineGuess").innerHTML;
-	     var solution = document.getElementById("solution").innerHTML;
-             $('#userGuess').text(userInput);
-	     if (userInput == solution) {
-		 $('#user').addClass("success");
-	     } else {
-		 $('#user').addClass("danger");
-	     }
-	     if (machineGuess == solution) {
-		 $('#machine').addClass("success");
-	     } else {
-		 $('#machine').addClass("danger");
-	     } 
-
-      $('#game').fadeOut();
-      $('.bs-example-modal-md').modal('show');
           });
-
 
       });
     </script>
+
 </body>
 
 </html>
