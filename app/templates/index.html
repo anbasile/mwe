@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -130,7 +129,7 @@
           </div>
         </div>
         <div class="row">
-	    <div class="col-lg-6 col-lg-offset-2">
+	    <div class="col-lg-6 col-lg-offset-3">
 	    <p>
 		This is a simple game. You are given 5 words and you have to guess a sixth. Take these for example:
 	    </p>
@@ -255,7 +254,9 @@
 		  $('#symbol').addClass("fa fa-frown-o fa-5x");
 		  $('#testa').addClass('animated hinge');
 	      }
-	      $("#again").append('<p class="animated infinite pulse"><a href="http://mwe.herokuapp.com/" style="color:white">PLAY AGAIN!</a></p>')
+	      $("#again").append(
+		  '<p class="animated infinite pulse"><a href="http://mwe.herokuapp.com/" style="color:white">PLAY AGAIN!</a></p>'
+	      )
               $('#game').fadeOut();
 	      $('#rules').fadeOut();
 	      $('#rulesnav').fadeOut();
@@ -264,7 +265,6 @@
 
       });
     </script>
-
 </body>
 
 </html>
