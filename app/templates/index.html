@@ -63,7 +63,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="#page-top">MWE - A Language Game</a>
+                <a class="navbar-brand" href="#page-top">MWE <span class="fa fa-gamepad"></span> A Language Game </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -94,7 +94,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <img id="testa" class="img-responsive" src="/static/img/a.png" alt="">
+                    <img id="testa" class="img-responsive animated bounceIn" src="/static/img/a.png" alt="">
 		    <div id="game" class="intro-text col-lg-6 col-lg-offset-3" >
 			<span class="skills">
 			    <span>
@@ -107,7 +107,7 @@
 			    <input type="text"
 				   class="form-control text-center"
 				   id="userInput"
-				   placeholder="your guess" required>
+				   placeholder="your guess" required autofocus>
 			  </div>
 			    <button type="submit" id="play" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-md">
 				PLAY!
@@ -188,7 +188,8 @@
             </div>
             <div class="row">
 		<div class="col-lg-4 col-lg-offset-2">
-		    <p>MWE is a language game built for fun by Angelo Basile and Federico Sangati. Please note this is still in beta.</p>
+		    <p>MWE is a language game built for fun by <b>Angelo Basile</b> and <b>Federico Sangati</b>.
+		    Please note this is still in beta.</p>
 		</div>
 		<div class="col-lg-4">
 		    <p>If you found a bug, or want to make a suggestions or maybe you want to know more, then contact us by <a style="color:white" href="mailto:angelobasile@yandex.ru"><i>email</i></a>.</p>
@@ -322,7 +323,7 @@
 		  $('#symbol').addClass("fa fa-frown-o fa-5x");
 		  $('#testa').addClass('animated hinge');
 	      }
-	      $("#again").append('<p><a href="http://mwe.herokuapp.com/" style="color:white">PLAY AGAIN!</a></p>')
+	      $("#again").append('<p class="animated infinite pulse"><a href="http://mwe.herokuapp.com/" style="color:white">PLAY AGAIN!</a></p>')
               $('#game').fadeOut();
 	      $('#rules').fadeOut();
 	      $('#rulesnav').fadeOut();
