@@ -10,7 +10,7 @@ dataset = {
     'time': ['long','spend','short','give','working'],
     'way': ['long','go','get','come','easy'],
     'days': ['early','past','old','spent','take'],
-    'parts': ['spare','component','consitutent','played','separate'],
+    'parts': ['spare','component','constitutent','played','separate'],
     'case': ['court','present','particular','prosecution','adjourned'],
     'life': ['real','family','whole','public','saved'],
     'service': ['free','telephone','intelligence','security','regular'],
