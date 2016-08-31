@@ -256,12 +256,13 @@
 		    {% for word in words %}
 		    <span class="animated fadeIn"><b>{{  word }}</b></span> 
 		    {% endfor %}
-		    <h1 id="solution"><b>{{ solution }}</b></h1>
+		    <h1><b id="solution">{{ solution }}</b></h1>
 		</div>
 		<div class="text-center">
 		    <p id="outcome">
 		    </p>
 		    <span id="symbol"></span>
+		    <p id="test">AAA</p>
 		</div>
 		<div class="modal-footer">
 		    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -310,8 +311,8 @@
           $('#myForm').submit(function(event){
 	     event.preventDefault();
               var userInput = document.getElementById("userInput").value;
-	      var solution = document.getElementById("solution").innerHTML;
-	      
+	      var solution = document.getElementById("solution").innerHTML.toLowerCase();
+
               $('#userGuess').text(userInput);
 	      if (userInput == solution) {
 		  $('#outcome').text("Great. You won!");
