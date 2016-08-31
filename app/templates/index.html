@@ -107,7 +107,7 @@
 			    <input type="text"
 				   class="form-control text-center"
 				   id="userInput"
-				   placeholder="your guess">
+				   placeholder="your guess" required>
 			  </div>
 			    <button type="submit" id="play" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-md">
 				PLAY!
@@ -256,7 +256,7 @@
 		    {% for word in words %}
 		    <span class="animated fadeIn"><b>{{  word }}</b></span> 
 		    {% endfor %}
-		    <h1><b id="solution">{{ solution }}</b></h1>
+		    <h1 class="animated flip"><b id="solution">{{ solution }}</b></h1>
 		</div>
 		<div class="text-center">
 		    <p id="outcome">
