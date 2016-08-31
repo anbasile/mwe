@@ -1,9 +1,9 @@
-# mwe
-A language game.
+# Mwe
+A language game on Multiword Expressions.
 
 # Rules
 
-This is a simple game. You are given 5 words and you have to guess a sixth. Take these for example:
+This is a simple game. You are given 5 words and you have to guess a sixth one. Take these for example:
 
 whole - extended - close - large - nuclear
 
