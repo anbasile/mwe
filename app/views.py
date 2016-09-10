@@ -17,9 +17,9 @@ dataset = {
     'hands': ['shook','wash','holding','raised','rubbed']
 }
 
-SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
-manual_url = os.path.join(SITE_ROOT, "static/data", "manual.json")
-auto_url = os.path.join(SITE_ROOT, "static/data", "auto.json")
+# SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+manual_url = os.path.join("static/data", "manual.json")
+auto_url = os.path.join("static/data", "auto.json")
 dataset = json.load(open(manual_url))
 dataset2 = json.load(open(auto_url))
 
