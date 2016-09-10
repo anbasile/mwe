@@ -1,10 +1,8 @@
 from flask import render_template, flash, redirect
 from app import app
-from .forms import tryForm
-import pandas as pd
-import numpy as np
 import random
-from .words import calculate
+import json
+
 
 dataset = {
     'time': ['long','spend','short','give','working'],
@@ -19,10 +17,8 @@ dataset = {
     'hands': ['shook','wash','holding','raised','rubbed']
 }
 
-dataset2 = {
-    'cioa': ['sss','sss','ddd','ddd','dd'],
-}
-
+with open('/autoGame.json') as data_file:    
+    dataset2 = json.load(data_file)
 
 @app.route('/', methods=('GET', 'POST'))
 
