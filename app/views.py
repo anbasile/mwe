@@ -19,12 +19,26 @@ dataset = {
     'hands': ['shook','wash','holding','raised','rubbed']
 }
 
+dataset2 = {
+    'cioa': ['sss','sss','ddd','ddd','dd'],
+}
+
+
 @app.route('/', methods=('GET', 'POST'))
 
 @app.route('/index', methods=('GET', 'POST'))
 def index():
     word = random.choice(list(dataset.keys()))
     words = dataset[word]
+    return render_template('index.html',
+                           solution=word,
+                           words=words
+                           )
+
+@app.route('/auto-mode', methods=('GET', 'POST'))
+def auto():
+    word = random.choice(list(dataset2.keys()))
+    words = dataset2[word]
     return render_template('index.html',
                            solution=word,
                            words=words

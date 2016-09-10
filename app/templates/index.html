@@ -109,9 +109,15 @@
 				   id="userInput"
 				   placeholder="your guess" required autofocus>
 			  </div>
-			    <button type="submit" id="play" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-md">
+			  <button type="submit" id="play" class="btn btn-primary" data-toggle="modal"
+				  data-target=".bs-example-modal-md">
 				PLAY!
 			    </button>
+			    <a class="btn btn-primary" role="button" href="https://mwe.herokuapp.com/auto-mode" aria-expanded="false"
+			       aria-controls="collapseExample">
+				AUTO-MODE
+</a>
+
 		      </form>
 		    </div>
 		    <div id="again"></div>
@@ -237,7 +243,7 @@
     <!-- enable tooltip -->
     <script>
       $(document).ready(function(){
-          $('[data-toggle="popover"]').popover();
+      $('[data-toggle="popover"]').popover();
 
           $('#myForm').submit(function(event){
 	     event.preventDefault();
