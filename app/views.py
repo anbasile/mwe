@@ -1,5 +1,6 @@
 from flask import render_template, flash, redirect
 from app import app
+import os
 import random
 import json
 
@@ -16,9 +17,9 @@ dataset = {
     'course': ['training','main','first','take','start'],
     'hands': ['shook','wash','holding','raised','rubbed']
 }
-
-with open('data/auto.json') as data_file:    
-    dataset2 = json.load(data_file)
+SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+json_url = os.path.join(SITE_ROOT, "static/data", "auto.json")
+dataset2 = json.load(open(json_url))
 
 @app.route('/', methods=('GET', 'POST'))
 
