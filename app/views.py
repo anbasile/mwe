@@ -4,7 +4,6 @@ import os
 import random
 import json
 
-
 dataset = {
     'time': ['long','spend','short','give','working'],
     'way': ['long','go','get','come','easy'],
@@ -19,8 +18,10 @@ dataset = {
 }
 
 SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
-json_url = os.path.join(SITE_ROOT, "static/data", "auto.json")
-dataset2 = json.load(open(json_url))
+manual_url = os.path.join(SITE_ROOT, "static/data", "manual.json")
+auto_url = os.path.join(SITE_ROOT, "static/data", "auto.json")
+dataset = json.load(open(manual_url))
+dataset2 = json.load(open(auto_url))
 
 @app.route('/', methods=('GET', 'POST'))
 
