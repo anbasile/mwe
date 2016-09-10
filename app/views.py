@@ -17,7 +17,7 @@ dataset = {
     'hands': ['shook','wash','holding','raised','rubbed']
 }
 
-with open('auto.json') as data_file:    
+with open('./data/auto.json') as data_file:    
     dataset2 = json.load(data_file)
 
 @app.route('/', methods=('GET', 'POST'))
