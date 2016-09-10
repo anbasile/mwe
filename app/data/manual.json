@@ -1,12 +1,72 @@
 {
-    'time': ['long','spend','short','give','working'],
-    'way': ['long','go','get','come','easy'],
-    'days': ['early','past','old','spent','take'],
-    'parts': ['spare','component','constitutent','played','separate'],
-    'case': ['court','present','particular','prosecution','adjourned'],
-    'life': ['real','family','whole','public','saved'],
-    'service': ['free','telephone','intelligence','security','regular'],
-    'area': ['play','residential','wide','major','surrounding'],
-    'course': ['training','main','first','take','start'],
-    'hands': ['shook','wash','holding','raised','rubbed']
+  "hands": [
+    "shook",
+    "wash",
+    "holding",
+    "raised",
+    "rubbed"
+  ],
+  "course": [
+    "training",
+    "main",
+    "first",
+    "take",
+    "start"
+  ],
+  "area": [
+    "play",
+    "residential",
+    "wide",
+    "major",
+    "surrounding"
+  ],
+  "service": [
+    "free",
+    "telephone",
+    "intelligence",
+    "security",
+    "regular"
+  ],
+  "life": [
+    "real",
+    "family",
+    "whole",
+    "public",
+    "saved"
+  ],
+  "case": [
+    "court",
+    "present",
+    "particular",
+    "prosecution",
+    "adjourned"
+  ],
+  "parts": [
+    "spare",
+    "component",
+    "constitutent",
+    "played",
+    "separate"
+  ],
+  "days": [
+    "early",
+    "past",
+    "old",
+    "spent",
+    "take"
+  ],
+  "way": [
+    "long",
+    "go",
+    "get",
+    "come",
+    "easy"
+  ],
+  "time": [
+    "long",
+    "spend",
+    "short",
+    "give",
+    "working"
+  ]
 }
