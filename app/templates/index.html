@@ -169,11 +169,25 @@
         </div>
         <div class="row">
 	    <div class="col-lg-6 col-lg-offset-3">
-		<p>
-		    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum blandit enim ipsum. Donec lectus mi, iaculis non mollis eget, consectetur at elit. Duis fermentum ut lectus efficitur pharetra. Proin auctor commodo auctor. Maecenas sagittis sagittis ex, rutrum consectetur mi convallis at. Duis a scelerisque elit. Morbi sapien nunc, facilisis vel dolor sit amet, aliquet ullamcorper neque. Mauris egestas posuere lacus, eget rutrum libero consequat sollicitudin. Nam placerat augue at blandit faucibus. Morbi consectetur ante nibh, sit amet auctor turpis sollicitudin vitae. Fusce ut faucibus dui. 
-		</p>
+	    <p>
+		In the auto-mode the tuples of the 5 + 1 (clue and unknown) words are generated automatically from collocations data downloaded from <a href="http://www.collocates.info/entriesWithCollocates.txt" target="_blank">collocates.info</a>.
+	    </p>
+	    <p>	    
+		Current constraints are:
+		<ul>
+			<li>the tuple with the 5 words are chosen in order of Mutual Information</li>
+			<li>unknown word (to be guessed) should be a noun</li>
+			<li>clue words should be a noun, a verb, an adjective or a preposition</li>
+			<li>no more than 2 nouns among the 5 clue words</li>
+			<li>no more than 2 verbs among the 5 clue words</li>
+			<li>no more than 2 adjective among the 5 clue words</li>
+			<li>no more than 1 preposition among the 5 clue words</li>
+		</ul>  
+	    </p>		
 	    </div>
-	</div>
+	    <p>Got it? Try it!</p>
+	    </div>
+        </div>
       </div>
     </section>
 
