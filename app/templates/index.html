@@ -94,7 +94,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <img id="testa" class="img-responsive animated bounceIn" src="/static/img/a.png" alt="">
+		    <a href="http://mwe.herokuapp.com/">
+			<img id="testa" class="img-responsive animated bounceIn" src="/static/img/a.png" alt="">
+		    </a>
 		    <div id="game" class="intro-text col-lg-6 col-lg-offset-3" >
 
 			    <span class="skills">
@@ -230,8 +232,17 @@
 		    </p>
 		    <span id="symbol"></span>
 		</div>
+		<hr>
+		<div class="text-center">
+		  <h5>How difficult this was?</h5>
+		  <form id="rating">
+		    <input type="radio" name="radioName" value="1" /> easy
+		    <input type="radio" name="radioName" value="2" /> medium
+		    <input type="radio" name="radioName" value="3" /> too difficult
+		  </form>
+		</div>
 		<div class="modal-footer">
-		    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		    <button type="button" class="btn btn-default" id="closemodal" data-dismiss="modal">Close</button>
 		</div>
 	    </div>
 	</div>
@@ -296,7 +307,12 @@
 	      $('#rules').fadeOut();
 	      $('#rulesnav').fadeOut();
 
-          });
+	  });
+
+	  /* $('#closemodal').click(function(event){
+	     alert($('input[name=radioName]:checked', '#rating').val()); */
+      });
+
 
       });
     </script>
