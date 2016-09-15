@@ -4,24 +4,14 @@ import os
 import random
 import json
 
-dataset = {
-    'time': ['long','spend','short','give','working'],
-    'way': ['long','go','get','come','easy'],
-    'days': ['early','past','old','spent','take'],
-    'parts': ['spare','component','constitutent','played','separate'],
-    'case': ['court','present','particular','prosecution','adjourned'],
-    'life': ['real','family','whole','public','saved'],
-    'service': ['free','telephone','intelligence','security','regular'],
-    'area': ['play','residential','wide','major','surrounding'],
-    'course': ['training','main','first','take','start'],
-    'hands': ['shook','wash','holding','raised','rubbed']
-}
-
 SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
 manual_url = os.path.join(SITE_ROOT, "static/data", "manual.json")
+m_ex_url = os.path.join(SITE_ROOT, "static/data", "examples.json")
 auto_url = os.path.join(SITE_ROOT, "static/data", "auto.json")
+
 dataset = json.load(open(manual_url))
 dataset2 = json.load(open(auto_url))
+m_examples = json.load(open(m_ex_url))
 
 @app.route('/', methods=('GET', 'POST'))
 
@@ -29,8 +19,10 @@ dataset2 = json.load(open(auto_url))
 def index():
     word = random.choice(list(dataset.keys()))
     words = dataset[word]
+    examples = m_examples[word]
     return render_template('index.html',
                            solution=word,
+                           examples=examples,
                            words=words
                            )
 
