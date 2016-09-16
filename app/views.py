@@ -70,16 +70,14 @@ def echo():
     word = random.choice(list(dataset.keys()))
     words = dataset[word]
     examples = m_examples[word]
-    if text:
-        if text == '/play':
-            # send set
-            requests.post(sendUrl, data = {'chat_id':userid,'text': str(words)})
-            # send solution
-            requests.post(sendUrl, data = {'chat_id':userid,'text': str(word)})
-            # send examples
-            requests.post(sendUrl, data = {'chat_id':userid,'text': str(examples)})
-            return "ok"
-        return requests.post(sendUrl, data = {'chat_id':userid,'text': "instructions"})
-    else:
+    if text == '/play':
+        # send set
+        w = requests.post(sendUrl, data = {'chat_id':userid,'text': str(words)})
+        # send solution
+        s = requests.post(sendUrl, data = {'chat_id':userid,'text': str(word)})
         return "ok"
+    i = requests.post(sendUrl, data = {'chat_id':userid,'text': "instructions"})
+    return "ok"
+
+
 
