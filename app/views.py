@@ -73,10 +73,11 @@ def echo():
         return "ok"
     elif text == '/play':
         g = requests.post(sendUrl, data = {'chat_id':userid,'text': str(words)})
+        time.sleep(3)
         s = requests.post(sendUrl, data = {'chat_id':userid,'text': str(word)})
         return 'OK'
     else:
-        instructions = "Type '/play' to start. You will have 10 seconds to guess the solution."
+        instructions = "Type '/play' to start. You will have 3 seconds to guess the solution."
         i = requests.post(sendUrl, data = {'chat_id':userid,'text': instructions})
         return 'OK'
 
