@@ -62,6 +62,8 @@ def auto():
 
 @app.route("/tg/webhook/", methods = ['POST'])
 def echo():
+    BASEURL = 'https://api.telegram.org/bot271783166:AAGjjmD6Dj1T1r-urEr0o2JoKcQAZ1ZBCu4'
+    sendUrl = BASEURL+'/sendMessage'
     content = request.get_json()
     text = content['message']['text']
     userid = content['message']['from']['id']
