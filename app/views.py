@@ -4,6 +4,7 @@ import os
 import random
 import json
 import time
+import requests
 
 SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
 manual_url = os.path.join(SITE_ROOT, "static/data", "manual.json")
