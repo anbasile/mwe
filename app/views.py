@@ -37,7 +37,7 @@ def auto():
                            words=words
                            )
 
-@app.route('/tg/webhook', methods=('POST'))
+@app.route('/tg/webhook', methods=('GET','POST'))
 def telegram():
     BASEURL = 'https://api.telegram.org/bot271783166:AAGjjmD6Dj1T1r-urEr0o2JoKcQAZ1ZBCu4'
     sendUrl = BASEURL+'/sendMessage'
