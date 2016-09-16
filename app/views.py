@@ -49,13 +49,13 @@ def telegram():
     examples = m_examples[word]
     if text == '/play':
         # send set
-        game = requests.post(sendUrl, data = {'chat_id':userid,'text': str(words)}))
+        game = requests.post(sendUrl, data = {'chat_id':userid,'text': str(words)})
         time.sleep(60)
         # send solution
-        solution = requests.post(sendUrl, data = {'chat_id':userid,'text': str(word)}))
+        solution = requests.post(sendUrl, data = {'chat_id':userid,'text': str(word)})
         time.sleep(1)
         # send examples
-        ex = requests.post(sendUrl, data = {'chat_id':userid,'text': str(examples)}))
+        ex = requests.post(sendUrl, data = {'chat_id':userid,'text': str(examples)})
         return "ok"
     return (requests.post(sendUrl, data = {'chat_id':userid,'text': "instructions"}))
 
