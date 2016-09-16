@@ -80,5 +80,3 @@ def echo():
         # send examples
         requests.post(sendUrl, data = {'chat_id':userid,'text': str(examples)})
         return "ok"
-    return requests.post(sendUrl, data = {'chat_id':userid,'text': "instructions"})
-
