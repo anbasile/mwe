@@ -67,6 +67,18 @@ def echo():
     content = request.get_json()
     text = content['message']['text']
     userid = content['message']['from']['id']
-    r = requests.post(sendUrl, data = {'chat_id':userid,'text': text})
-    return "Hi!"
+    word = random.choice(list(dataset.keys()))
+    words = dataset[word]
+    examples = m_examples[word]
+    if text == '/play':
+        # send set
+        requests.post(sendUrl, data = {'chat_id':userid,'text': str(words)})
+        time.sleep(60)
+        # send solution
+        requests.post(sendUrl, data = {'chat_id':userid,'text': str(word)})
+        time.sleep(1)
+        # send examples
+        requests.post(sendUrl, data = {'chat_id':userid,'text': str(examples)})
+        return "ok"
+    return requests.post(sendUrl, data = {'chat_id':userid,'text': "instructions"})
 
