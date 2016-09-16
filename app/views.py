@@ -74,6 +74,7 @@ def echo():
         # send set
         w = requests.post(sendUrl, data = {'chat_id':userid,'text': str(words)})
         # send solution
+        time.sleep(10)
         s = requests.post(sendUrl, data = {'chat_id':userid,'text': str(word)})
         return "ok"
     i = requests.post(sendUrl, data = {'chat_id':userid,'text': "instructions"})
