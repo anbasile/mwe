@@ -69,16 +69,15 @@ def echo():
     userid = content['message']['from']['id']
     word = random.choice(list(dataset.keys()))
     words = dataset[word]
-    if text == '/play':
-        # send set
-        w = requests.post(sendUrl, data = {'chat_id':userid,'text': str(words)})
-        # send solution
-        time.sleep(10)
-        s = requests.post(sendUrl, data = {'chat_id':userid,'text': str(word)})
+    if not text:
         return "ok"
-    instructions = "Type '/play' to start. You will have 10 seconds to guess the solution."
-    i = requests.post(sendUrl, data = {'chat_id':userid,'text': instructions})
-    return "ok"
+    elif text == '/play':
+        g = requests.post(sendUrl, data = {'chat_id':userid,'text': str(words)})
+        return requests.post(sendUrl, data = {'chat_id':userid,'text': str(word)})
+    else:
+        instructions = "Type '/play' to start. You will have 10 seconds to guess the solution."
+        return requests.post(sendUrl, data = {'chat_id':userid,'text': instructions})
+
 
 
 
