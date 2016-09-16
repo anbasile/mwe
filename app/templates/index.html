@@ -327,7 +327,7 @@
 
           $('#myForm').submit(function(event){
 	     event.preventDefault();
-              var userInput = document.getElementById("userInput").value;
+              var userInput = document.getElementById("userInput").value.toLowerCase();
 	      var solution = document.getElementById("solution").innerHTML.toLowerCase();
               $('#test').text(solution+userInput);
               $('#userGuess').text(userInput);
