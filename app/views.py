@@ -37,25 +37,34 @@ def auto():
                            words=words
                            )
 
-@app.route('/tg/webhook', methods=('GET','POST'))
-def telegram():
-    BASEURL = 'https://api.telegram.org/bot271783166:AAGjjmD6Dj1T1r-urEr0o2JoKcQAZ1ZBCu4'
-    sendUrl = BASEURL+'/sendMessage'
+# @app.route('/tg/webhook', methods=('GET','POST'))
+# def telegram():
+#     BASEURL = 'https://api.telegram.org/bot271783166:AAGjjmD6Dj1T1r-urEr0o2JoKcQAZ1ZBCu4'
+#     sendUrl = BASEURL+'/sendMessage'
+#     content = request.get_json()
+#     text = content['message']['text']
+#     userid = content['message']['from']['id']
+#     word = random.choice(list(dataset.keys()))
+#     words = dataset[word]
+#     examples = m_examples[word]
+#     if text == '/play':
+#         # send set
+#         requests.post(sendUrl, data = {'chat_id':userid,'text': str(words)})
+#         time.sleep(60)
+#         # send solution
+#         requests.post(sendUrl, data = {'chat_id':userid,'text': str(word)})
+#         time.sleep(1)
+#         # send examples
+#         requests.post(sendUrl, data = {'chat_id':userid,'text': str(examples)})
+#         return "ok"
+#     return (requests.post(sendUrl, data = {'chat_id':userid,'text': "instructions"}))
+
+
+@app.route("/tg/webhook/", methods = ['POST'])
+def echo():
     content = request.get_json()
     text = content['message']['text']
     userid = content['message']['from']['id']
-    word = random.choice(list(dataset.keys()))
-    words = dataset[word]
-    examples = m_examples[word]
-    if text == '/play':
-        # send set
-        game = requests.post(sendUrl, data = {'chat_id':userid,'text': str(words)})
-        time.sleep(60)
-        # send solution
-        solution = requests.post(sendUrl, data = {'chat_id':userid,'text': str(word)})
-        time.sleep(1)
-        # send examples
-        ex = requests.post(sendUrl, data = {'chat_id':userid,'text': str(examples)})
-        return "ok"
-    return (requests.post(sendUrl, data = {'chat_id':userid,'text': "instructions"}))
+    r = requests.post(sendUrl, data = {'chat_id':userid,'text': text})
+    return "Hi!"
 
