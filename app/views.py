@@ -76,9 +76,10 @@ def echo():
         # send solution
         time.sleep(10)
         s = requests.post(sendUrl, data = {'chat_id':userid,'text': str(word)})
-        return "ok"
-    i = requests.post(sendUrl, data = {'chat_id':userid,'text': "instructions"})
-    return "ok"
+        return 200
+    instructions = "Type '/play' to start. You will have 10 seconds to guess the solution."
+    i = requests.post(sendUrl, data = {'chat_id':userid,'text': instructions})
+    return 200
 
 
 
