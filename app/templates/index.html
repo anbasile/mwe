@@ -266,12 +266,14 @@
 		    <span id="symbol"></span>
 		</div>
 		<hr>
+		{% if examples %}
 		<div class="text-center">
 		    <h5>Examples</h5>
 			{% for sentence in examples %}
 			<p>{{ sentence }}</p>
 			{% endfor %}	
 		</div>
+		{% endif %}
 		<div class="text-center">
 		  <h5>How difficult this was?</h5>
 		  <form id="rating">
