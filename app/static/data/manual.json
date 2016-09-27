@@ -65,9 +65,9 @@
   "hands": [
     "shook",
     "wash",
-    "holding",
-    "raised",
-    "rubbed"
+    "hold",
+    "raise",
+    "rub"
   ],
   "course": [
     "training",
@@ -95,20 +95,20 @@
     "family",
     "whole",
     "public",
-    "saved"
+    "save"
   ],
   "case": [
     "court",
     "present",
     "particular",
     "prosecution",
-    "adjourned"
+    "adjourn"
   ],
   "part": [
     "spare",
     "take",
     "constitutent",
-    "played",
+    "play",
     "company"
   ],
   "day": [
@@ -123,7 +123,7 @@
     "by",
     "know",
     "other",
-    "thinking"
+    "think"
   ],
   "time": [
     "money",
