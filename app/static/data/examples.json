@@ -1,4 +1,67 @@
 {
+  "back": [
+    "a stab in the back",
+    "answer back",
+    "back in the day",
+    "be back in business",
+    "back on track"
+  ],
+  "idea": [
+    "an abstract idea",
+    "get the wrong idea",
+    "a bright idea",
+    "I didn't have the faintest idea",
+    "She accused the company of stealing her idea."
+  ],
+  "power": [
+    "power engine",
+    "solar power",
+    "power supply",
+    "knowledge is power",
+    "power up"
+  ],
+  "friend": [
+    "best friend",
+    "circle of friend",
+    "friend in need",
+    "school friend",
+    "mutual friend"
+  ],
+  "word": [
+    "word of mouth",
+    "beyond words",
+    "Famous last words",
+    "content word",
+    "The look in her eyes filled in the unspoken words in her sentence"
+  ],
+  "money": [
+    "a large amount of money",
+    "I haven't got any money left",
+    "Half the money raised was donated to charity",
+    "I'd say most of that is dirty money",
+    "you certainly get your money's worth"
+  ],
+  "water": [
+    "The oceans are the largest bodies of water on the planet.",
+    "He's in deep water.",
+    "Pay the water bill",
+    "the wreck was under water.",
+    "We're starting to get into murky waters exploiting these tax loopholes."
+  ],
+  "home": [
+    "Feel at home",
+    "Home sweet home",
+    "Her job means she's away from home for weeks at a time.",
+    "There's no place like home",
+    "Welcome home"
+  ],
+  "point": [
+    "That's beside the point (not relevant)",
+    "The water has reached the boiling point",
+    "We reached a point of no return",
+    "The fact that the book had large type is an important selling point.",
+    "From my point of view, all this talk is a waste of time."
+  ],
   "hands": [
     "We shook hands",
     "I will have to wash my hands",
@@ -7,11 +70,11 @@
     "The owner rubbed his hands"
   ],
   "course": [
-    "Find disaster relief training courses",
+    "You should join the training course",
     "A dish served as a main course",
-    "A typical Italian lunch consists of a first course",
-    "I am taking a course",
-    "Can I start a course..."
+    "A typical Italian lunch consists of a first course, ...",
+    "a crash course in math",
+    "The disease has spread so far that there's nothing to do now but let it follow the course of nature."
   ],
   "area": [
     "Race Planet for Kids - mega indoor play area for kids",
@@ -41,32 +104,32 @@
     "Israeli prosecution concludes case against poet",
     "The case is adjourned and rescheduled"
   ],
-  "parts": [
-    "problems and shortage of spare parts",
-    "some of these parts are components that",
-    "being broken down into its constituent parts. ",
-    "It was just a good album and they played the parts really well. ",
-    "symptoms which relate to the separate parts are usually"
+  "part": [
+    "do you have a spare part",
+    "Bill refused to take part in the game.",
+    "identify each constituent part ",
+    "he played the part of Prospero.",
+    "the chairman has parted company with the club."
   ],
-  "days": [
-    "In the early days the stigma of",
-    "Anyway, what have you been doing these past two days?",
-    "is a legacy from the old days",
+  "day": [
+    "let's call it a day",
+    "all day (long)",
+    "in the early days of the cinema",
     "she spent twelve days in Geneva",
-    "That could take days if not weeks"
+    "seize the day"
   ],
   "way": [
     "But still a long way to go.",
-    "But before you go that way",
-    "They may be about to get their way",
-    "Please, come this way",
-    "This is the easy way. "
+    "By the way",
+    "I fear I don't know my way around the territory",
+    "One way or the other.",
+    "that, to his way of thinking, would only make matters worse."
   ],
   "time": [
-    "I think it's all over for a long time.",
+    "time is money",
     "I seemed to spend more time sending fish back",
     "After a very short time",
-    "Just give it time. ",
+    "people say time flies when you're having fun",
     "He now has two gardeners working full time"
   ]
 }

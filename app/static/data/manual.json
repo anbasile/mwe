@@ -1,4 +1,67 @@
 {
+  "back": [
+    "stab",
+    "answer",
+    "day",
+    "business",
+    "track"
+  ],
+  "idea": [
+    "abstract",
+    "wrong",
+    "bright",
+    "faintest",
+    "steal"
+  ],
+  "power": [
+    "engine",
+    "solar",
+    "supply",
+    "knowledge",
+    "up"
+  ],
+  "friend": [
+    "best",
+    "circle",
+    "need",
+    "school",
+    "mutual"
+  ],
+  "word": [
+    "mouth",
+    "beyond",
+    "last",
+    "content",
+    "unspoken"
+  ],
+  "money": [
+    "amount",
+    "left",
+    "raise",
+    "dirty",
+    "worth"
+  ],
+  "water": [
+    "body",
+    "deep",
+    "bill",
+    "under",
+    "murky"
+  ],
+  "home": [
+    "feel",
+    "sweet",
+    "away",
+    "like",
+    "welcome"
+  ],
+  "point": [
+    "beside",
+    "boiling",
+    "return",
+    "selling",
+    "view"
+  ],
   "hands": [
     "shook",
     "wash",
@@ -10,8 +73,8 @@
     "training",
     "main",
     "first",
-    "take",
-    "start"
+    "crash",
+    "nature"
   ],
   "area": [
     "play",
@@ -41,32 +104,32 @@
     "prosecution",
     "adjourned"
   ],
-  "parts": [
+  "part": [
     "spare",
-    "component",
+    "take",
     "constitutent",
     "played",
-    "separate"
+    "company"
   ],
-  "days": [
+  "day": [
+    "call",
+    "long",
     "early",
-    "past",
-    "old",
-    "spent",
-    "take"
+    "spend",
+    "seize"
   ],
   "way": [
     "long",
-    "go",
-    "get",
-    "come",
-    "easy"
+    "by",
+    "know",
+    "other",
+    "thinking"
   ],
   "time": [
-    "long",
+    "money",
     "spend",
     "short",
-    "give",
-    "working"
+    "fly",
+    "full"
   ]
 }
